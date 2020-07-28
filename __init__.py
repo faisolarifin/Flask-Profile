@@ -8,9 +8,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/curriculum')
+@app.route('/cv')
 def cv():
-    return "belum ada"
+    return render_template('cv.html')
 
 if __name__ == "__main__":
     app.run(debug=1)
