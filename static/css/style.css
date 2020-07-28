@@ -67,6 +67,19 @@ body {
     border-color: #F13D59;
 }
 
+.typed_wrap h1 {
+    display: inline;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+    content: '|';
+    display: inline;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
 @media (min-width: 992px) {
     .col-interest>.col-grup {
     margin: 40px 10px;

@@ -8,8 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='./css/style.css') }}">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/style.css') }}">
 
     <title>Faisol Arifin | Dashboard</title>
 </head>
@@ -18,7 +17,7 @@
         <div class="row">
             <div class="col-sm-5 col-name mt-4 mt-sm-0 text-center text-sm-left">
                 <h3 class="font-weight-bolder"><span>Helo,</span> i am</h3>
-                <h1 class="font-weight-bold">Faisol Arifin</h1>
+                <h1 class="font-weight-bold"><span class="typed"></span></h1>
                 <p class="font-weight-lighter">UI/UX designer, Fullstack Developer </p>
                 <a href="{{ url_for('cv') }}"><button class="btn btn-pink">curriculum vitae <i class="fas fa-chevron-right"></i></button></a>
             </div>
@@ -229,6 +228,25 @@
     </section>
 
     <!--script here-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var options = {
+            strings: ['Faisol Arifin'],
+            stringsElement: null,
+            typeSpeed: 60,
+            startDelay: 1000,
+            backSpeed: 50,
+            backDelay: 2500,
+            loop: true,
+            loopCount: false,
+            showCursor: true,
+            cursorChar: "<i style='font-weight:normal;color:rgba(0,0,0,0.5);'>_</i>",
+            contentType: 'html'
 
+        };
+
+        var typed = new Typed('.typed', options);
+    </script>
 </body>
 </html>
